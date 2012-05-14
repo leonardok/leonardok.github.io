@@ -28,15 +28,21 @@
 
 <div class='twenty-four-col'>
   <div id='header'>
-    <h1><a href="/">{{ site.title }}</a></h1>
+    <h1>leonardok.</h1>
   </div>
   <div id='sidebar'>
     <ul>
+      <li><a href="/">Home</a></li>
       {% for page in site.html_pages %}
       {% if page.title %} <li><a href="{{ page.url }}">{{ page.title }}</a></li> {% endif %}
       {% endfor %}
       <li></li>
+    </ul>
+    <br />
+    <ul>
       <li><a href="http://github.com/leonardok">github.com/leonardok</a></li>
+      <li><a href="http://flickr.com/leokorndorfer">flickr.com/leokorndorfer</a></li>
+      <li><a href="http://twitter.com/leonardork">twitter.com/leonardork</a></li>
     </ul>
   </div>
   <div id='content'>
