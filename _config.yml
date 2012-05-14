@@ -1,0 +1,28 @@
+# standard jekyll configuration
+
+permalink: date
+pygments: true
+exclude: ['Rakefile', 'README.md', 'config.rb']
+markdown: rdiscount
+include: ['_pages/about.md']
+
+# configuration required for some pages
+
+domain: leok.me
+title: leonardok
+author: Leonardo
+email: leokorndorfer@gmail.com
+
+# configuration for ehancements, uncomment to enable
+
+# feedburner:
+#   id: feedburnerid
+
+# google_analytics:
+#   account: UA-XXXXX-X
+
+github:
+    username: leonardok
+
+# disqus:
+#   id: disqusid

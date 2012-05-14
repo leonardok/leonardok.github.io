@@ -1,0 +1,33 @@
+@import "mixins/syntax";
+
+// add your styles, see http://compass-style.org/
+@import "compass";
+
+$blueprint_grid_columns: 24;
+$blueprint_grid_width: 30px;
+ 
+@import "blueprint";
+@import "blueprint/link-icons";
+
+
+
+.twenty-four-col {
+	@include link-icons;
+	@include container;
+	background-color: #fff;
+	font-face: sans-serif;
+
+	#header, #footer {
+		@include column(24); 
+	}
+	#sidebar {
+		@include column(5); 
+		ul { margin: 0px; padding: 0px; }
+		ul li { list-style: none; }
+	}
+	#content {
+		@include column(19, true); 
+		padding-bottom: 100px;
+		h1 { margin-top: 0px; padding-top: 0px; }
+	} 
+}
