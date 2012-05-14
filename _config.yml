@@ -18,11 +18,12 @@ email: leokorndorfer@gmail.com
 # feedburner:
 #   id: feedburnerid
 
-# google_analytics:
-#   account: UA-XXXXX-X
+google_analytics:
+  account: UA-27240426-1
+
 
 github:
-    username: leonardok
+  username: leonardok
 
 # disqus:
 #   id: disqusid
