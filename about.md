@@ -5,16 +5,15 @@ title: About
 <h1>{{ page.title }}</h1>
 
 My name is Leonardo and I'm a Computer Science Undergrad at [UFRGS](http://ufrgs.br).
-I'm a Linux user since long time now - unfortunately I don’t have the time to 
-keep testing a lot of distros anymore, and don’t have the time to contribute 
-with open source projects, even that I have a lot of will of doing it.
+I'm a Linux user since a long time now - unfortunately I don’t have the time to 
+keep testing a lot of distros anymore.
 
-It was after 2006 that, when I bought a Mac, left Linux over the mac (for 
-desktop I must say. Still my preferred development operating system.) I still 
+It was after 2006 that, when I bought a Mac, I left Linux over the mac (for 
+desktop, I must say. Still my preferred development operating system.) I still 
 have some virtual machines with Slackware (wich is my favorite) and an 
 ArchLinux, that I maintain alive.
 
-This is a little brief of what I have been doing so far:
+Here is a little brief of what I have been doing so far:
 
 - I currently work at [T&T](http://www.tet.com.br) (not AT&T) in a Ruby on Rails
 awesome super secret project, but I've also worked with: Embedded operating 
