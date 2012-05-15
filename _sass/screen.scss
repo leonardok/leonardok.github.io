@@ -15,7 +15,6 @@ $blueprint_grid_width: 30px;
 	@include link-icons;
 	@include container;
 	background-color: #fff;
-	font-face: sans-serif;
 
 	a[href^="http:"], a[href^="mailto:"], a[href^="http:"]:visited, 
 	a[href$=".pdf"], a[href$=".doc"], a[href$=".xls"], a[href$=".rss"], 
