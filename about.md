@@ -40,14 +40,14 @@ do what the smart people say and learn a lot (at PIPCA (Programa Programa de Pó
 Graduação em Computação Aplicada da Universidade do Vale do Rio dos Sinos - 
 UNISINOS/RS). I have worked with high performance computing there.
 
-I have also tried to build my own company focusing in development with Ruby on 
-Rails web applications. It didn't worked out because as I had to dedicate 
-myself to university. Start-ups demand lots of time and you have to choose at
-some point, but it was a very intense experience that I certainly don't regret. 
+I have also tried to build my own company focusing in development with Ruby on
+Rails web applications. Start-ups demand lots of time and you have to choose at
+some point, but it was a very intense experience that I certainly don't regret.
+
+I also like photography, bowling, pool, rugby and brew a beer once in a while.
 
 
- 
 More info on my resume can be found @ [linkedin](http://br.linkedin.com/in/leokorndorfer), and if 
-you feel like, you can check my public repository @ [github/leonardok](http://github.com/leonardok) .
+you feel like, you can check my repositories and some progects @ [the projects page](http://leok.me/projects.html).
 
 
