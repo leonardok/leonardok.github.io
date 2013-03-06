@@ -3,7 +3,7 @@ layout: default
 description: 
 ---
 
-<h2>I don't think this is the page you're looking for.</h2>
+<h2>I don't think this is what you're looking for.</h2>
 This is my personal website. Here you can find some information about me and stuff that I do.
 
 Thanks for stopping by.
@@ -13,3 +13,8 @@ Thanks for stopping by.
 	<p>My posts are more self notes to how to redo stuff I do and find cool.</p>
 </span>
 
+<ul class="unstyled">
+{% for post in site.posts %}
+<li><a href="{{ post.url }}">{{ post.title }} <i class="icon-hand-left"></i></a></li>
+{% endfor %}
+</ul>
