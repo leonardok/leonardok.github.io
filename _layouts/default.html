@@ -1,64 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}" />
-    {% endif %}
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" media="screen" href="/stylesheets/screen.css" type="text/css" />
-    {% if site.feedburner %}
-    <link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
-    {% endif %}
-    {% if site.google_analytics %}
-    <!-- google analytics async -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '{{ site.google_analytics.account }}']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    {% endif %}
-  </head>
-  <body>
+	<head>
+		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+		{% if page.description %}
+		<meta name="description" content="{{ page.description }}" />
+		{% endif %}
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" media="screen" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css" />
+		{% if site.feedburner %}
+		<link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
+		{% endif %}
+		{% if site.google_analytics %}
+		<!-- google analytics async -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', '{{ site.google_analytics.account }}']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		{% endif %}
+	</head>
 
-<div class='twenty-four-col'>
-  <div id='header'>
-    <h1>leonardok.</h1>
-  </div>
-  <div id='sidebar'>
-    <ul>
-      <li><a href="/">Home</a></li>
-      {% for page in site.html_pages %}
-      {% if page.title %} <li><a href="{{ page.url }}">{{ page.title }}</a></li> {% endif %}
-      {% endfor %}
-      <li></li>
-    </ul>
-    <br />
-    <ul>
-      <li><a target="_blank" href="http://github.com/leonardok">github.com/leonardok</a></li>
-      <li><a target="_blank" href="http://flickr.com/leokorndorfer">flickr.com/leokorndorfer</a></li>
-      <li><a target="_blank" href="http://twitter.com/leonardork">twitter.com/leonardork</a></li>
-    </ul>
-  </div>
-  <div id='content'>
-    {{ content }}
-  </div>
-  <div id='footer'>
-    © Leonardo Korndörfer <br />
-    <span class='small-font'><a href="http://github.com/mojombo/jekyll/">jekyll</a> + 
-                             <a href="http://compass-style.org/">compass</a> and powered by 
-                             <a href="http://github.com/">github</a>
-    </span>
-  </div>
-</div>
+	<body>
+		<div class=container>
+			<div class="row">
+				<div class="span3" id="menu_col">
+					<div id='header'>
+						<h1>leonardok.</h1>
+					</div>
 
-  {% if site.github %}
-    <a href="http://github.com/{{ site.github.username }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
-  {% endif %}
-  </body>
+					<div id='sidebar'>
+						<ul class="unstyled">
+							<li><a href="/">Home <i class="icon-hand-left"></i></a></li>
+							{% for page in site.html_pages %}
+							{% if page.title %} <li><a href="{{ page.url }}">{{ page.title }} <i class="icon-hand-left"></i></a></li> {% endif %}
+							{% endfor %}
+						</ul>
+						<br>
+						<ul class="unstyled">
+							<li><a target="_blank" href="http://github.com/leonardok">github.com/leonardok</a></li>
+							<li><a target="_blank" href="http://flickr.com/leokorndorfer">flickr.com/leokorndorfer</a></li>
+							<li><a target="_blank" href="http://twitter.com/leonardork">twitter.com/leonardork</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<!-- CONTENT -->
+				<div class="span9" id="content_col">
+
+					<div id='content'>
+						{{ content }}
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		{% if site.github %}
+		<a href="http://github.com/{{ site.github.username }}">
+			<img style="position: absolute; top: 0; right: 0; border: 0;" 
+					src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" 
+					alt="Fork me on GitHub" />
+		</a>
+		{% endif %}
+
+
+
+
+
+<!--div class='twenty-four-col'>
+	<div id='footer'>
+		© Leonardo Korndörfer <br />
+		<span class='small-font'><a href="http://github.com/mojombo/jekyll/">jekyll</a> + 
+														 <a href="http://compass-style.org/">compass</a> and powered by 
+														 <a href="http://github.com/">github</a>
+		</span>
+	</div>
+</div-->
+
+	</body>
 </html>
