@@ -7,6 +7,8 @@
 		{% endif %}
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" media="screen" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" media="screen" href="/assets/css/bootstrap-extensions.css" type="text/css" />
+		<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
 		{% if site.feedburner %}
 		<link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
 		{% endif %}
@@ -88,6 +90,8 @@
 		</span>
 	</div>
 </div-->
+	<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 	</body>
 </html>

@@ -4,7 +4,7 @@ permalink: date
 pygments: true
 exclude: ['Rakefile', 'README.md', 'config.rb']
 markdown: rdiscount
-include: ['_pages/']
+include: ['_pages/', 'images']
 
 # configuration required for some pages
 

@@ -1,0 +1,15 @@
+.post img {
+	-moz-box-shadow: 0 0 3px 3px #ccc;
+	-webkit-box-shadow: 0 0 3px 3px #ccc;
+	box-shadow: 0 0 3px 3px #ccc;
+	margin-bottom: 20px;
+}
+
+blockquote p {
+	font-size: 1.1em;
+	font-style: italic;
+	line-height: 1.4em;
+}
+
+h2, h3, h4 { margin-top: 40px; }
+
