@@ -3,7 +3,7 @@ layout: post
 title: What you need to know to use couchdb and python + django
 tags: [python, django, nosql, linux, couchdb]
 description: how to add couchdb to django project
-last_updated: 02/05/2013
+last_updated: 05/02/2013
 ---
 
 ** <span class="disclaimer"> Warning!! </span> this post is in construction, but it could help others as is.**
@@ -19,7 +19,7 @@ These are the two:
 
 ### A little brief. What to expect.
 
-So this is a NoSQL database. This means you won.t be running queries on it. You
+So this is a NoSQL database. This means you won't be running queries on it. You
 will basically be accessing pre-defined mapping/reducing functions. This is an
 exemple of a mapping function:
 
@@ -29,10 +29,10 @@ exemple of a mapping function:
 		}
 	}
 
-It will iterate over all your rows. and map an id to an object according to
-your pre-defined logic. These dudes are stored on your couchdb server, so you
+It will iterate over all your rows and map an id to an object according to
+your pre-defined logic. These dudes are stored in your couchdb server, so you
 just go there and create new mapping functions, they will be availiable at a
-given URL, and that.s how you are going to retrieve your objects.
+given URL, and that's how you are going to retrieve your objects.
 
 
 ### Motivation
@@ -44,14 +44,14 @@ opted for using some document based database.
 My first stop was at [http://nosql-database.org/](http://nosql-database.org/).
 They have a nice and comprehensive list of no-sql databases, and separated by
 categories. My choice was CouchDB, first because I come from a Rails background,
-so this was the perfect oportunity to get a deeper knoloedge on something I have
-always just kiddig around. Second because it has a very nice REST API, and I
-find it very cool. It really is .relaxing..
+this was the perfect oportunity to get a deeper knoloedge, on something I have
+always just played with. Second because it has a very nice REST API, and I
+find it very cool.
 
-My second option was MongoDB. This DB also is very interesting to me, it is also
-a very popular NoSQL database, but it doesn.t seems to support REST out of the
-box. Another feature from CouchDB is the Futon, missing in Mongo. This might be
-an futile feature, but it cool to have a nice interface to use when running all
+My second option was MongoDB. This DB also is very interesting to me, also
+a very popular NoSQL database, but it doesn't seems to support REST out of the
+box. Another feature from CouchDB is the Futon. This might be
+a futile feature, but it is cool to have a nice interface to use when testing all
 your mapping and reducing stuffs.
 
 So I opted for CouchDB. What now?
@@ -60,8 +60,10 @@ So I opted for CouchDB. What now?
 ### Installation
 
 
-This is a django project, so:
+	# yes. I'm using Ubuntu
+	$ sudo apt-get install couchdb
 
+	# to install on django with venv
 	$ pip install couchdbkit
 
 
@@ -84,11 +86,11 @@ speak key features. You can digg it by yourself for more information.
 
 **``Versioning``**. CouchDB is based on versioning. This means that when you alter 
 some document in your database it does not update fields in a row, instead
-you will create a new copy of that document and store it as a new revision.
+it will create a new copy of that document, and store it as a new revision.
 
 CouchDB has some important concepts you have to know. One is the **``Document``**
 and other is the **``View``**. Sure, there are more, but with these two we can
-go ahead.
+go from here.
 
 
 #### Document
@@ -225,7 +227,10 @@ Now create some documents. You can create at the ``Django shell`` and save them.
 And right now, if you open your web interface, you will see that there two
 languages were created. Awesome! So it is working already.
 
+<a id="added2docs">
 ![Two languages added](/images/couch_db_futon_two_languages.png)
+<legend>Added two documents</caption>
+</a>
 
 
 ##### Continue reading...
@@ -254,7 +259,20 @@ database.
 
 #### Mapping
 
-Lets have a look at our first example:
+To create a ``View`` we are going to use Futon, so go at ``http://localhost:5984/_utils``
+and open your ``languages`` database. Your screen should looks like this 
+[picture](#added2docs).
+
+Now in the checkbox choose ``Temporary View``. You can see that you land in a page that
+just yields ``null`` as key and a ``document`` as value. Try and run to see what happens.
+You should see all your documents in the table bellow the map code.
+
+<a id="tempview">
+![New temp view](/images/couch_db_futon_new_temp_view.png)
+<legend>Opening a ``Temporary View``</caption>
+</a>
+
+Now lets have a look at our first example. Make your map code looks like this one:
 	function(doc) {
 		if (doc.doc_type == "Language"){
 			emit(doc._id, doc);
@@ -264,6 +282,33 @@ Lets have a look at our first example:
 What this does again? It iterates over ALL documents in your database, check
 if they are of the Language type (this is set after the class name that
 represents this document) and will return the id and the document as value.
+
+Save like the image. <br>
+
+<a id="">
+![New temp view](/images/couch_db_futon_saving_view_all.png)
+<legend>Saving the all ``Temporary View``</caption>
+</a>
+
+You can find your view at 
+[``http://localhost:5984/languages/_design/languages/_view/all``](http://localhost:5984/languages/_design/languages/_view/all).
+
+
+##### How to look for a key
+
+Create a new 
+	function(doc) {
+		if (doc.doc_type == "Language"){
+			emit(doc.name, doc);
+		}
+	}
+
+The URL you will be working on is ``http://localhost:5984/languages/_design/languages/_view/by_name``
+
+So you have declared the ``key`` of your emits as the doc.name. Now go to:
+[``http://localhost:5984/languages/_design/languages/_view/by_name?key="python"``](http://localhost:5984/languages/_design/languages/_view/by_name?key="python")
+
+
 
 
 
