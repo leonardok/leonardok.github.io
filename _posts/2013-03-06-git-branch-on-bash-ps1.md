@@ -2,6 +2,7 @@
 layout: post
 title: Adding git branch to your PS1
 tags: [bash, PS1, post, linux]
+description: Add current git branch to your PS1 linux prompt
 last_updated: 03/06/2013
 ---
 

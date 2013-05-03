@@ -2,6 +2,7 @@
 layout: post
 title: What you need to know to use couchdb and python + django
 tags: [python, django, nosql, linux, couchdb]
+description: how to add couchdb to django project
 last_updated: 02/05/2013
 ---
 
