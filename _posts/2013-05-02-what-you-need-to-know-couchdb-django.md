@@ -5,6 +5,9 @@ tags: [python, django, nosql, linux, couchdb]
 last_updated: 02/05/2013
 ---
 
+** <span class="disclaimer"> Warning!! </span> this post is in construction, but it could help others as is.**
+
+
 When I first tried to use CouchDB and Django I found two articles showing how,
 but both lacking some explanation. You are highly recomended to check them.
 These are the two:
