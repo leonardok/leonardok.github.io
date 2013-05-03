@@ -22,3 +22,4 @@ h2, h3, h4 { margin-top: 40px; }
 
 legend { font-size:1.0em;margin-bottom:10px; text-align:center; width:100%; border: 0px }
 
+pre { background: #fdf6e3; border: 1px solid #ddd }

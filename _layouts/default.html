@@ -8,22 +8,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" media="screen" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" media="screen" href="/assets/css/bootstrap-extensions.css" type="text/css" />
-		<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+		<link rel="stylesheet" href="http://softwaremaniacs.org/media/soft/highlight/styles/solarized_light.css">
+
 		{% if site.feedburner %}
 		<link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
-		{% endif %}
-		{% if site.google_analytics %}
-		<!-- google analytics async -->
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', '{{ site.google_analytics.account }}']);
-			_gaq.push(['_trackPageview']);
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
 		{% endif %}
 	</head>
 
@@ -65,10 +53,6 @@
 		</div>
 
 
-
-
-
-
 		{% if site.github %}
 		<a href="http://github.com/{{ site.github.username }}">
 			<img style="position: absolute; top: 0; right: 0; border: 0;" 
@@ -78,20 +62,23 @@
 		{% endif %}
 
 
+		<script src="http://softwaremaniacs.org/media/soft/highlight/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 
+		{% if site.google_analytics %}
+		<!-- google analytics async -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', '{{ site.google_analytics.account }}']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		{% endif %}
 
-
-<!--div class='twenty-four-col'>
-	<div id='footer'>
-		© Leonardo Korndörfer <br />
-		<span class='small-font'><a href="http://github.com/mojombo/jekyll/">jekyll</a> + 
-														 <a href="http://compass-style.org/">compass</a> and powered by 
-														 <a href="http://github.com/">github</a>
-		</span>
-	</div>
-</div-->
-	<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
 
 	</body>
 </html>

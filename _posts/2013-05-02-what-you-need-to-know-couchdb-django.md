@@ -293,6 +293,13 @@ Save like the image. <br>
 You can find your view at 
 [``http://localhost:5984/languages/_design/languages/_view/all``](http://localhost:5984/languages/_design/languages/_view/all).
 
+##### <span class="disclaimer">Tip</span>
+If you are ever in doubt of the URL for your view, you can use this shortcut in the futon.
+
+<a id="raw_url">
+![New temp view](/images/couch_db_futon_know_your_url.png)
+<legend>Discovering your view URL</caption>
+</a>
 
 ##### How to look for a key
 
@@ -307,6 +314,58 @@ The URL you will be working on is ``http://localhost:5984/languages/_design/lang
 
 So you have declared the ``key`` of your emits as the doc.name. Now go to:
 [``http://localhost:5984/languages/_design/languages/_view/by_name?key="python"``](http://localhost:5984/languages/_design/languages/_view/by_name?key="python")
+
+
+
+#### Reducing
+
+For ``reduce`` we will bebuilding a new database, just to make a quick demonstration.
+Create a database called ``people``. Add some documents. I added 7 documents
+that have 2 fields (other than _id and _rev, of course): ``country`` and ``qt`` 
+for quantity).
+
+	# each line is a document content
+	Country Qt
+	"us"	1
+	"au"	2
+	"ch"	3
+	"us"	4
+	"ch"	5
+	"br"	6
+	"br"	7
+
+Create a new ``Temporary view``, save it as by_country, and paste the following
+code:
+
+	# map function
+	function(doc) {
+		emit(doc.country, doc.qt);
+	}
+
+	# reduce function
+	function (keys, values, rereduce) {
+		return values;
+	}
+
+Make sure you have checked the ``Reduce`` option in the header of the results box.
+See what happens when you run. You should see something like this:
+
+	"us"	[4, 1]
+	"ch"	[5, 3]
+	"br"	[7, 6]
+	"au"	[2]
+
+Take a moment to understand what happened. You see that the document view now
+show our keys 
+
+If you change your code, replacing ``return values;`` by ``return sum(values);``
+in your reduce function, you should see something cool happening.
+
+
+
+
+
+
 
 
 
