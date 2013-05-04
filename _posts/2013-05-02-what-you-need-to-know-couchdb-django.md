@@ -171,10 +171,10 @@ the field ``doc_type`` equal to your class name.
 languages/views.py
 	# some imports were hidden
 	from langs.models import Language
+	from django.core.context_processors import csrf
 
 	def new(request):
-	    c = {}
-	    c.update(csrf(request))
+	    c = dict(csrf(request))
 	    return render_to_response("langs_templates/new.haml", c)
 
 	def create(request):
