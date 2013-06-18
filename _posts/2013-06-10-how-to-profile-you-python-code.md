@@ -82,6 +82,21 @@ Running it without profiling gives us almost the same time.
     user    0m2.340s
     sys     0m0.012s
     
+    
+#### kcachegrind
+
+With kcachegrind you can see your call tree in a more human readable form, like the picture bellow.
+The input file for kcachegrind is the output of the ``pyprof2calltree [-i input_file] [-o output_file]``
+command.
+
+OBS: There is also a windows port availiable at 
+[http://sourceforge.net/projects/precompiledbin/](http://sourceforge.net/projects/precompiledbin/).
+
+(Picture taken from the official website at 
+[http://kcachegrind.sourceforge.net/html/Shot3.html](http://kcachegrind.sourceforge.net/html/Shot3.html))
+
+![kcachegrind](http://kcachegrind.sourceforge.net/html/pics/KcgShot3.gif)
+    
 
 #### line_profiler and kernprof
 
@@ -119,5 +134,6 @@ the main execution. You will have to run ``kernprof`` and then ``python -m line_
 * [Python Line-by-line Profiler by Silas Sewell](http://silas.sewell.org/blog/2009/05/28/python-line-by-line-profiler-line_profiler-and-kernprof/)
 * [http://docs.python.org/2/library/profile.html](http://docs.python.org/2/library/profile.html)
 * [pyprof2calltree](https://pypi.python.org/pypi/pyprof2calltree/)
-* [Kcachegrind](http://kcachegrind.sourceforge.net/html/Home.html)
+* [kcachegrind](http://kcachegrind.sourceforge.net/html/Home.html)
+* [kcachegrind for windows](http://sourceforge.net/projects/precompiledbin/)
 * [line-profiler](http://pythonhosted.org/line_profiler/)
