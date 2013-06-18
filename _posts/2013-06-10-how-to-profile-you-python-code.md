@@ -53,12 +53,12 @@ Take the code you want to profile and run with:
 
 This is the very simple function we are testing.
     
-    1 #!/bin/python
-    2
-    3 z = 0
-    4 for j in xrange(5000):
-    5     for i in xrange(5000):
-    6         z += 1
+    #!/bin/python
+    
+    z = 0
+    for j in xrange(5000):
+        for i in xrange(5000):
+            z += 1
 
 
 Profiling with cProfile:
