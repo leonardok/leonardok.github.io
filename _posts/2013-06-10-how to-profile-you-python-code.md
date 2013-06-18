@@ -10,7 +10,7 @@ This is a brief explanation of how you can profile your code, in order to improv
 
 ### Requirements
 
-    pip install pyprof2calltree
+    pip install pyprof2calltree line_profiler
     
     
 ### Who is taking my cheese?
@@ -85,4 +85,30 @@ Running it without profiling gives us almost the same time.
 
 #### line_profiler and kernprof
 
+line_profiler will add some time to construct the .lprof result, but anyway it adds some overhead to
+the main execution. You will have to run ``kernprof`` and then ``python -m line_profiler``.
 
+    $ time kernprof.py -l test.py
+    Wrote profile results to test.py.lprof
+    
+    real    0m46.832s
+    user    0m46.695s
+    sys     0m0.028s
+
+    #######################################
+
+    $ python -m line_profiler test.py.lprof
+    Timer unit: 1e-06 s
+
+    File: test.py
+    Function: test_method at line 3
+    Total time: 23.4783 s
+    
+    Line #      Hits         Time  Per Hit   % Time  Line Contents
+    ==============================================================
+         3                                           # @profile
+         4                                           def test_method():
+         5         1            1      1.0      0.0      z = 0
+         6      5001         2226      0.4      0.0      for j in xrange(5000):
+         7  25005000     11056412      0.4     47.1          for i in xrange(5000):
+         8  25000000     12419670      0.5     52.9              z += 1
