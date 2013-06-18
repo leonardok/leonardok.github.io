@@ -112,3 +112,12 @@ the main execution. You will have to run ``kernprof`` and then ``python -m line_
          6      5001         2226      0.4      0.0      for j in xrange(5000):
          7  25005000     11056412      0.4     47.1          for i in xrange(5000):
          8  25000000     12419670      0.5     52.9              z += 1
+
+
+## References
+
+* [Python Line-by-line Profiler by Silas Sewell](http://silas.sewell.org/blog/2009/05/28/python-line-by-line-profiler-line_profiler-and-kernprof/)
+* [http://docs.python.org/2/library/profile.html](http://docs.python.org/2/library/profile.html)
+* [pyprof2calltree](https://pypi.python.org/pypi/pyprof2calltree/)
+* [Kcachegrind](http://kcachegrind.sourceforge.net/html/Home.html)
+* [line-profiler](http://pythonhosted.org/line_profiler/)
