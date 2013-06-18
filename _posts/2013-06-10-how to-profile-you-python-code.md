@@ -28,11 +28,11 @@ The Python docs have a section about profilers, you should read it at
 to the kcachegrind graphical calltree analyser, to see nice and colourful schematics of our function calls.
 
 [Kcachegrind](http://kcachegrind.sourceforge.net/html/Home.html), as I just said, is a tool for graphic 
-analisys (but not only graphic) of your code calls. There is also a windows port for it.
+analysis (but not only graphic) of your code calls. There is also a windows port for it.
 
 [line-profiler](http://pythonhosted.org/line_profiler/) is the tool to use after you have some idea of
 where the bottlenecks are. It can tell, line by line, where the most of the time is being spent. This is really
-awesome and have halped me a lot.
+awesome and have helped me a lot.
 
 
 ### How to
