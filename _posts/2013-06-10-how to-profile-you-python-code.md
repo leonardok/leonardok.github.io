@@ -3,10 +3,10 @@ layout: post
 title: How to profile you python code
 tags: [profiling, python, kcachegrind, cProfile]
 description: Profile your python code to see where are the bottlenecks
-last_updated: 06/10/2013
+last_updated: 06/18/2013
 ---
 
-This is a brief explanation of how you can profile your code, in order to improve your benchmarks.
+This is a brief explanation of how you can profile your python code.
 
 ### Requirements
 
