@@ -3,7 +3,7 @@ layout: post
 title: Sample authentication on Google Drive and SkyDrive - OAuth 2.0
 tags: [python, oauth, linux]
 description: Two little examples of oauth 2.0 for google drive and skydrive
-last_updated: 14/06/2013
+last_updated: 14/05/2013
 ---
 
 ### Two little sample codes of OAuth using python and requests.
