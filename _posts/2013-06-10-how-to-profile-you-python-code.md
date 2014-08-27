@@ -3,7 +3,7 @@ layout: post
 title: How to profile you python code
 tags: [profiling, python, kcachegrind, cProfile]
 description: Profile your python code to see where are the bottlenecks
-last_updated: 06/18/2013
+last_updated: 08/27/2014
 ---
 
 This is a brief explanation of how you can profile your python code.
@@ -127,6 +127,12 @@ the main execution. You will have to run ``kernprof`` and then ``python -m line_
          6      5001         2226      0.4      0.0      for j in xrange(5000):
          7  25005000     11056412      0.4     47.1          for i in xrange(5000):
          8  25000000     12419670      0.5     52.9              z += 1
+
+
+
+### Memory Profiling
+
+Easy to use profiler, that has the same decorators as the other profile tools. It is not a complete analyser but can give an overall picture of memory increments. [https://pypi.python.org/pypi/memory_profiler](https://pypi.python.org/pypi/memory_profiler)
 
 
 ## References
