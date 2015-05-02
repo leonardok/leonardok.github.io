@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-gem "jekyll", ">= 0.12.1"
+gem "jekyll", ">= 2.5.3"
 gem "rdiscount"
+gem "therubyracer"
