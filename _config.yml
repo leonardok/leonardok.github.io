@@ -6,6 +6,9 @@ exclude: ['Rakefile', 'README.md', 'config.rb']
 markdown: rdiscount
 include: ['_pages/', 'images']
 
+gems:
+  - jekyll-auto-image
+
 # configuration required for some pages
 
 domain: leok.me

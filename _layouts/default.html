@@ -2,11 +2,23 @@
 <html>
 	<head>
 		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-		{% if page.description %}
-		<meta name="description" content="{{ page.description }}" />
-		{% endif %}
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="google-site-verification" content="WVMIhYbkSq4UzkZa_sKgdMy5xnE3A7bJ1qJbYY4Y_L8" />
+
+		{% if page.description %} <meta name="description" content="{{ page.description }}" /> {% endif %}
+
+		<!-- Open Graph data -->
+		{% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
+		{% if page.description %}<meta property="og:description" content="description" />{% endif %}
+		{% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://www.example.com/" />
+
+
+		<!-- Twitter Card data -->
+		{% if page.image %} <meta name="twitter:image:src" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}"> {% endif %} 
+		{% if page.description %}<meta name="twitter:card" value="summary">{% endif %}
+
 		<link rel="stylesheet" media="screen" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" media="screen" href="/assets/css/bootstrap-extensions.css" type="text/css" />
 		<link rel="stylesheet" href="http://softwaremaniacs.org/media/soft/highlight/styles/solarized_light.css">
