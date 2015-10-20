@@ -1,4 +1,5 @@
 ---
+title: Retro Snake
 layout: default
 description: Retro Snake game
 image: http://leok.me/images/retrosnake/main_menu_v1.0.2.png

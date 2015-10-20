@@ -10,7 +10,7 @@
 		<!-- Open Graph data -->
 		{% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
 		{% if page.description %}<meta property="og:description" content="description" />{% endif %}
-		{% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+		{% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}" />{% endif %}
 		<meta property="og:type" content="article" />
 		<meta property="og:url" content="http://www.leok.me/" />
 
