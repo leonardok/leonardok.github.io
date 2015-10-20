@@ -1,7 +1,7 @@
 ---
 layout: default
 description: Retro Snake game
-image: /images/retrosnake/main_menu_v1.0.2.png
+image: http://leok.me/images/retrosnake/main_menu_v1.0.2.png
 tags: [games, game, unity3d, 2d, snake]
 last_updated: 20/10/2015
 ---
