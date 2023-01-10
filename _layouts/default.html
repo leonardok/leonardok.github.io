@@ -21,7 +21,8 @@
 
 		<link rel="stylesheet" media="screen" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" media="screen" href="/assets/css/bootstrap-extensions.css" type="text/css" />
-		<link rel="stylesheet" href="http://softwaremaniacs.org/media/soft/highlight/styles/solarized_light.css">
+		<link rel="stylesheet" media="screen" href="/assets/css/lightbox.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
 
 		{% if site.feedburner %}
 		<link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
@@ -45,10 +46,8 @@
 						</ul>
 						<br>
 						<ul class="unstyled">
-							<li><a target="_blank" href="http://github.com/leonardok">github.com/leonardok</a></li>
-							<li><a target="_blank" href="http://bitbucket.org/leonardok/">bitbucket.org/leonardok</a></li>
-							<li><a target="_blank" href="http://flickr.com/leokorndorfer">flickr.com/leokorndorfer</a></li>
-							<li><a target="_blank" href="http://twitter.com/leonardork">twitter.com/leonardork</a></li>
+							<li><a target="_blank" href="https://github.com/leonardok">github.com/leonardok</a></li>
+							<li><a target="_blank" href="https://www.linkedin.com/in/leokorndorfer/">linkedin.com/in/leokorndorfer</a></li>
 						</ul>
 					</div>
 
@@ -75,8 +74,16 @@
 		{% endif %}
 
 
-		<script src="http://softwaremaniacs.org/media/soft/highlight/highlight.pack.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/python.min.js"></script>
+		<script>hljs.highlightAll();</script>
+
+		<script type="text/javascript" src="/assets/javascripts/lightbox.js"></script>
+
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+			integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
+			crossorigin="anonymous"></script>
 
 		{% if site.google_analytics %}
 		<!-- google analytics async -->

@@ -4,6 +4,11 @@ title: About
 ---
 <h1>{{ page.title }}</h1>
 
+<div class="alert alert-primary" role="alert">
+  This is extremely outdated! I am keeping this here just for me to look back and see
+  what was going on around 2012. If you want to get in touch head to <strong><a href="https://www.linkedin.com/in/leokorndorfer" class="alert-link">https://www.linkedin.com/in/leokorndorfer/</a></strong>
+</div>
+
 My name is Leonardo and I'm a Computer Science Undergrad at [UFRGS](http://ufrgs.br).
 I'm a Linux user since a long time now - unfortunately I don’t have the time to 
 keep testing a lot of distros anymore.
