@@ -8,7 +8,7 @@ last_updated: 01/10/2023
 
 ![](/images/morbic12/overview.jpg){:style="max-height: 100%"}
 
-**DISCLAIMER #1:** I am no carpenter not shipwright.
+**DISCLAIMER #1:** I am no carpenter nor shipwright.
 
 **DISCLAIMER #2:** This post will be update with progress. For now its on draft mode.
 
