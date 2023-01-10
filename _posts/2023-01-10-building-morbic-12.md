@@ -28,6 +28,11 @@ So many delays on this. I sent the cut out plans to a CNC shop and got them read
 [<img src="/images/morbic12/planks.jpg">](/images/morbic12/planks.jpg)
 [<img src="/images/morbic12/cut_out_boards.jpg">](/images/morbic12/cut_out_boards.jpg)
 
+The boat is built on top of a support structure, where all the stations are places and planks are laid against. Those are already in the templates and the instructions
+are very clear.
+
+[<img src="/images/morbic12/support_base.jpg">](/images/morbic12/support_base.jpg)
+
 ### Part 1 - Laminated parts
 
 #### Stem
