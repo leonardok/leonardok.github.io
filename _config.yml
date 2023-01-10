@@ -3,7 +3,7 @@
 permalink: pretty
 pygments: true
 exclude: ['Rakefile', 'README.md', 'config.rb']
-markdown: rdiscount
+markdown: kramdown
 include: ['_pages/', 'images']
 
 gems:

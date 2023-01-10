@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "jekyll", ">= 2.5.3"
-gem "rdiscount"
+gem "jekyll", ">= 4.3.1"
+gem "kramdown"
 gem "therubyracer"
 gem 'jekyll-auto-image'
